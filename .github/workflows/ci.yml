@@ -112,7 +112,7 @@ jobs:
         python ./resources/ci/common/install.py
     # download binary artifact
     - name: Download Binary Artifact
-      uses: actions/download-artifact@v1
+      uses: actions/download-artifact@v4.1.7
       with:
         name: binaries-${{ matrix.os-name }}
         path: ./
@@ -164,25 +164,25 @@ jobs:
         python -m pip install pytz requests
     # download appversion artifact
     - name: Download AppVersion Artifact
-      uses: actions/download-artifact@v1
+      uses: actions/download-artifact@v4.1.7
       with:
         name: appversion-${{ matrix.os-name }}
         path: ../build
     # download ubuntu archive artifact
     - name: Download Ubuntu Archive Artifact
-      uses: actions/download-artifact@v1
+      uses: actions/download-artifact@v4.1.7
       with:
         name: archive-ubuntu-latest
         path: ../deploy/linux
     # download macos archive artifact
     - name: Download MacOS Archive Artifact
-      uses: actions/download-artifact@v1
+      uses: actions/download-artifact@v4.1.7
       with:
         name: archive-macOS-latest
         path: ../deploy/macos
     # download windows archive artifact
     - name: Download Windows Archive Artifact
-      uses: actions/download-artifact@v1
+      uses: actions/download-artifact@v4.1.7
       with:
         name: archive-windows-latest
         path: ../deploy/windows
